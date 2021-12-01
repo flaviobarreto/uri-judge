@@ -1,0 +1,49 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int dias, dias1, horas, minutos, segundos, horas1, minutos1, segundos1, w, x, y, z, inicio, fim, duracao, resto;
+
+            string[] vetor = Console.ReadLine().Split(' ');
+            dias = int.Parse(vetor[1]);
+
+            string[] vetor1 = Console.ReadLine().Split(' ');
+            horas = int.Parse(vetor1[0]);
+            minutos = int.Parse(vetor1[2]);
+            segundos = int.Parse(vetor1[4]);
+
+            string[] vetor2 = Console.ReadLine().Split(' ');
+            dias1 = int.Parse(vetor2[1]);
+
+            string[] vetor3 = Console.ReadLine().Split(' ');
+            horas1 = int.Parse(vetor3[0]);
+            minutos1 = int.Parse(vetor3[2]);
+            segundos1 = int.Parse(vetor3[4]);
+
+            inicio = (dias - 1) * 24 * 60 * 60 + horas * 60 * 60 + minutos * 60 + segundos;
+            fim = (dias1 - 1) * 24 * 60 * 60 + horas1 * 60 * 60 + minutos1 * 60 + segundos1;
+
+            duracao = fim - inicio;
+
+            w = duracao/(24 * 60 * 60);
+            resto = duracao % (24 * 60 * 60);
+            x = resto / (60 * 60);
+            resto = resto % (60 * 60);
+            y = resto / 60;
+            z = resto % 60;
+
+
+            Console.WriteLine(w + " dia(s)");
+            Console.WriteLine(x + " hora(s)");
+            Console.WriteLine(y + " minuto(s)");
+            Console.WriteLine(z + " segundo(s)");
+
+        }
+    }
+}
