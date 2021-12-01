@@ -1,0 +1,31 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int A, B, C, D;
+
+            String[] Vet = Console.ReadLine().Split(' ');
+            A = int.Parse(Vet[0]);
+            B = int.Parse(Vet[1]);
+            C = int.Parse(Vet[2]);
+            D = int.Parse(Vet[3]);
+
+            if (B > C && D > A && C + D > A + B && C >0 && D >0 && A>0)
+            {
+                Console.WriteLine("Valores aceitos");
+            } 
+            else
+            {
+                Console.WriteLine("Valores nao aceitos");
+            }
+
+
+        }
+    }
+}
