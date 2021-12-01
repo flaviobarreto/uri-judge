@@ -1,0 +1,19 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro {
+        class Program {
+        static void Main(string[] args) {
+
+            int x;
+            double y, a;
+
+            x = int.Parse(Console.ReadLine());
+            y = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            a = x / y;
+
+            Console.WriteLine(a.ToString("F3") + " km/l");
+
+        }
+    }
+}
