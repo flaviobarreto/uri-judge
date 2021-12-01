@@ -1,0 +1,19 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro {
+        class Program {
+        static void Main(string[] args) {
+
+            double pi, R, R3, Volume; 
+                
+            pi = 3.14159;
+            R = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            R3 = Math.Pow(R, 3.0);
+            Volume = (4.0 / 3.0) * pi * R3;
+
+            Console.WriteLine("VOLUME = " + Volume.ToString("F3"), CultureInfo.InvariantCulture);
+        }
+    }
+}
