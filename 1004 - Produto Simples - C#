@@ -1,0 +1,17 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro {
+        class Program {
+        static void Main(string[] args) {
+
+            int a, b, resultado;
+            a = int.Parse(Console.ReadLine());
+            b = int.Parse(Console.ReadLine());
+            resultado = a * b;
+
+            Console.WriteLine("PROD = " + resultado);
+                        
+        }
+    }
+}
