@@ -1,0 +1,23 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro {
+        class Program {
+        static void Main(string[] args) {
+
+            int NumDoFunc, Hora;
+            double Recebe, a;
+            
+            NumDoFunc = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Hora = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Recebe = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            a = Hora * Recebe;
+            
+
+            Console.WriteLine("NUMBER = " + NumDoFunc);
+            Console.WriteLine("SALARY = U$ " + a.ToString("F2"), CultureInfo.InvariantCulture);
+
+        }
+    }
+}
