@@ -1,0 +1,31 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro {
+        class Program {
+        static void Main(string[] args) {
+
+            double A, B, C, Media, PesoTotal, N1, N2, N3, R1, R2, R3, Total;
+            A = 2;
+            B = 3;
+            C = 5;
+            PesoTotal = A + B + C;
+
+            N1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            
+            N2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            
+            N3 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            R1 = A * N1;
+            R2 = B * N2;
+            R3 = C * N3;
+            Total = R1 + R2 + R3;
+
+            Media = Total / PesoTotal;
+
+            Console.WriteLine("MEDIA = " + Media.ToString("F1"));
+
+        }
+    }
+}
