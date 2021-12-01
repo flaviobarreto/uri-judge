@@ -1,0 +1,23 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro {
+        class Program {
+        static void Main(string[] args) {
+
+            int a, b, z, maiorAB, maior;
+
+            string[] valores = Console.ReadLine().Split (' ');
+            a = int.Parse(valores[0]);
+            b = int.Parse(valores[1]);
+            z = int.Parse(valores[2]);
+
+            maiorAB = (a + b + Math.Abs(a - b)) / 2;
+
+            maior = (maiorAB + z + Math.Abs(maiorAB - z)) / 2;
+
+            Console.WriteLine(maior + " eh o maior");
+
+        }
+    }
+}
