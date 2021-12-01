@@ -1,0 +1,19 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro {
+        class Program {
+        static void Main(string[] args) {
+
+            int A, B, s;
+
+            A = int.Parse(Console.ReadLine());
+            B = int.Parse(Console.ReadLine());
+
+            s = A + B;
+
+            Console.WriteLine("SOMA = " + s);
+                        
+        }
+    }
+}
