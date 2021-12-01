@@ -1,0 +1,20 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro {
+        class Program {
+        static void Main(string[] args) {
+
+            double area, s, raio, n;
+
+            n = 3.14159;
+            raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            s = Math.Pow(raio, 2.0);
+
+            area = n * s;
+                                 
+            Console.WriteLine("A=" + area.ToString("F4", CultureInfo.InvariantCulture));
+            
+        }
+    }
+}
