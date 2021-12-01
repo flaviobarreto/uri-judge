@@ -1,0 +1,38 @@
+using System;
+using System.Globalization;
+
+namespace primeiro {
+    class Program {
+        static void Main(string[] args) {
+
+            double A, B, C, pi, triangulo, circulo, trapezio, quadrado, retangulo, q;
+
+            pi = 3.14159;
+            
+            string[] vet = Console.ReadLine().Split(' ');
+            A = double.Parse(vet[0], CultureInfo.InvariantCulture);
+            B = double.Parse(vet[1], CultureInfo.InvariantCulture);
+            C = double.Parse(vet[2], CultureInfo.InvariantCulture);
+
+            triangulo = A * C / 2.00;
+
+            q = Math.Pow(C, 2.00);
+            circulo = q * pi;
+                     
+            trapezio = (A+B) * C/2.00;
+
+            quadrado = B * B;
+
+            retangulo = A * B;
+
+
+            Console.WriteLine("TRIANGULO: " + triangulo.ToString("F3", CultureInfo.InvariantCulture));
+            Console.WriteLine("CIRCULO: " + circulo.ToString("F3", CultureInfo.InvariantCulture));
+            Console.WriteLine("TRAPEZIO: " + trapezio.ToString("F3", CultureInfo.InvariantCulture));
+            Console.WriteLine("QUADRADO: " + quadrado.ToString("F3", CultureInfo.InvariantCulture));
+            Console.WriteLine("RETANGULO: " + retangulo.ToString("F3", CultureInfo.InvariantCulture));
+
+
+        }
+    }
+}
