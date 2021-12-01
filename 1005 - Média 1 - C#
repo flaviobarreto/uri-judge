@@ -1,0 +1,22 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro {
+        class Program {
+        static void Main(string[] args) {
+
+            double A, B, Media, P1, P2, P3;
+            
+            A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            P1 = 3.5 * A;
+            P2 = 7.5 * B;
+            P3 = P1 + P2;
+            
+            Media = P3 / 11;
+
+            Console.WriteLine("MEDIA = " + Media.ToString("F5"));
+
+        }
+    }
+}
