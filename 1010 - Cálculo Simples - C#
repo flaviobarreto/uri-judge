@@ -1,0 +1,30 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro {
+        class Program {
+        static void Main(string[] args) {
+
+            int p1, n1, p2, n2;
+            double u1, u2, r1, r2, a;
+
+            string[] vet = Console.ReadLine().Split(' ');
+            p1 = int.Parse(vet[0]);
+            n1 = int.Parse(vet[1]);
+            u1 = double.Parse(vet[2], CultureInfo.InvariantCulture);
+
+            string[] vet1 = Console.ReadLine().Split(' ');
+            p2 = int.Parse(vet1[0]);
+            n2 = int.Parse(vet1[1]);
+            u2 = double.Parse(vet1[2], CultureInfo.InvariantCulture);
+
+            r1 = n1 * u1;
+            r2 = n2 * u2;
+            a = r1 + r2;
+
+            Console.WriteLine("VALOR A PAGAR: R$ " + a.ToString("F2"), CultureInfo.InvariantCulture);
+
+
+        }
+    }
+}
