@@ -1,0 +1,21 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro {
+        class Program {
+        static void Main(string[] args) {
+
+            int h, v;
+            double l;
+
+            h = int.Parse(Console.ReadLine());
+            v = int.Parse(Console.ReadLine());
+
+            l = h * v / 12.00;
+
+            Console.WriteLine(l.ToString("F3", CultureInfo.InvariantCulture));
+
+
+        }
+    }
+}
