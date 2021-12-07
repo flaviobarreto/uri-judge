@@ -1,0 +1,56 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            double salario, imposto, imposto8, imposto18, imposto28;
+            salario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            if (salario >= 0.00 && salario <= 2000.00)
+            {
+                Console.WriteLine("isento");
+            }
+            else if (salario >= 2000.01 && salario <= 3000.00)
+            {
+                salario -= 2000.00;
+                //salario vale até R$ 1000.00
+                salario *= 0.08;
+                Console.WriteLine("R$ " + salario.ToString("F2", CultureInfo.InvariantCulture));
+            }
+            else if (salario >= 3000.01 && salario <= 4500.00)
+            {
+                salario -= 2000.00;
+                //salario vale até R$ 2500.00
+                imposto8 = 1000.00 * 0.08;
+                salario -= 1000.00;
+                //salario vale até R$1500.00
+                imposto18 = salario * 0.18;
+                // somar os dois impostos, de 8% e 18%.
+                imposto = imposto8 + imposto18;
+                Console.WriteLine("R$ " + imposto.ToString("F2", CultureInfo.InvariantCulture));
+            }
+            else if (salario > 4500.00)
+            {
+                salario -= 2000.00;
+                //salario vale acima de R$ 2500.01
+                imposto8 = 1000.00 * 0.08;
+                salario -= 1000.00;
+                //salario vale acima de R$1500.01
+                imposto18 = 1500.00 * 0.18;
+                salario -= 1500.00;
+                // salario acima de R$ 1.00
+                imposto28 = salario * 0.28;
+                // somar impostos com taxas de 8%, 18% e 28%.
+                imposto = imposto8 + imposto18 + imposto28;
+
+                Console.WriteLine("R$ " + imposto.ToString("F2", CultureInfo.InvariantCulture));
+            }
+
+        }
+    }
+}
