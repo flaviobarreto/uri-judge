@@ -1,0 +1,66 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int recebe;
+
+            recebe = int.Parse(Console.ReadLine());
+
+            if (recebe == 1)
+            {
+                Console.WriteLine("January");
+            }
+            if (recebe == 2)
+            {
+                Console.WriteLine("February");
+            }
+            if (recebe == 3)
+            {
+                Console.WriteLine("March");
+            }
+            if (recebe == 4)
+            {
+                Console.WriteLine("April");
+            }
+            if (recebe ==5)
+            {
+                Console.WriteLine("May");
+            }
+            if (recebe == 6)
+            {
+                Console.WriteLine("June");
+            }
+            if (recebe == 7)
+            {
+                Console.WriteLine("July");
+            }
+            if (recebe == 8)
+            {
+                Console.WriteLine("August");
+            }
+            if (recebe == 9)
+            {
+                Console.WriteLine("September");
+            }
+            if (recebe == 10)
+            {
+                Console.WriteLine("October");
+            }
+            if (recebe == 11)
+            {
+                Console.WriteLine("November");
+            }
+            if (recebe == 12)
+            {
+                Console.WriteLine("December");
+            }
+
+        }
+    }
+}
