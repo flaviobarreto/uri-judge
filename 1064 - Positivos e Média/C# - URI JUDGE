@@ -1,0 +1,59 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            double a, b, c, d, e, f, soma, positivo, media;
+            soma = 0;
+            positivo = 0;
+            //++ soma +1 quando positivo
+            //+= soma = soma + entrada;
+            a = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            if (a > 0)
+            {
+                positivo++;
+                soma += a;
+            }
+            b = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            if (b > 0)
+            {
+                positivo++;
+                soma += b;
+            }
+            c = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            if (c > 0)
+            {
+                positivo++;
+                soma += c;
+            }
+            d = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            if (d > 0)
+            {
+                positivo++;
+                soma += d;
+            }
+            e = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            if (e > 0)
+            {
+                positivo++;
+                soma += e;
+            }
+            f = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            if (f > 0)
+            {
+                positivo++;
+                soma += f;
+            }
+            Console.WriteLine(positivo + " valores positivos");
+            media = soma / positivo;
+            Console.WriteLine(media.ToString("F1", CultureInfo.InvariantCulture));
+
+
+        }
+    }
+}
