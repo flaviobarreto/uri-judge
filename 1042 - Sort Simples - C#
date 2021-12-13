@@ -23,15 +23,19 @@ namespace primeiro
                     Console.WriteLine(x);
                     Console.WriteLine(y);
                     Console.WriteLine(z);
-                    Console.WriteLine(" ");
                 }
                 else
                 {
                     Console.WriteLine(x);
                     Console.WriteLine(z);
                     Console.WriteLine(y);
-                    Console.WriteLine(" ");
                 }
+                
+                //como recebemos os dados e espaço
+                Console.WriteLine(" ");
+                Console.WriteLine(x);
+                Console.WriteLine(y);
+                Console.WriteLine(z);
             }
             else if (y < x && y < z)
             {
@@ -40,40 +44,42 @@ namespace primeiro
                     Console.WriteLine(y);
                     Console.WriteLine(x);
                     Console.WriteLine(z);
-                    Console.WriteLine(" ");
                 }
                 else
                 {
                     Console.WriteLine(y);
                     Console.WriteLine(z);
                     Console.WriteLine(x);
-                    Console.WriteLine(" ");
                 }
+                //como recebemos os dados e espaço
+                Console.WriteLine(" ");
+                Console.WriteLine(x);
+                Console.WriteLine(y);
+                Console.WriteLine(z);
             }
 
-            else if (z < x && x < y)
+            else if (z < x && z < y)
             {
                 if (x < y)
                 {
                     Console.WriteLine(z);
                     Console.WriteLine(x);
                     Console.WriteLine(y);
-                    Console.WriteLine(" ");
                 }
                 else
                 {
                     Console.WriteLine(z);
                     Console.WriteLine(y);
                     Console.WriteLine(x);
-                    Console.WriteLine(" ");
                 }
+                //como recebemos os dados e espaço
+                Console.WriteLine(" ");
+                Console.WriteLine(x);
+                Console.WriteLine(y);
+                Console.WriteLine(z);
             }
 
-            //como recebemos os dados 
-            Console.WriteLine(x);
-            Console.WriteLine(y);
-            Console.WriteLine(z);
-
+   
         }
     }
 }
