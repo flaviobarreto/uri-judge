@@ -1,0 +1,38 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int idade, media, recebe, stop;
+            double IdadeMedia;
+            idade = 0;
+            media = 0;
+            stop = 1;
+
+            recebe = int.Parse(Console.ReadLine());
+            
+            while (stop != 0)
+            {
+                if (recebe > 0)
+                {
+                    idade += recebe;
+                    media += 1;
+                    recebe = int.Parse(Console.ReadLine());
+                }
+                else if (recebe < 0)
+                {
+                    stop -= 1;
+                }
+            }
+
+            IdadeMedia = (double) idade / media;
+            Console.WriteLine(IdadeMedia.ToString("F2", CultureInfo.InvariantCulture));
+
+        }
+    }
+}
