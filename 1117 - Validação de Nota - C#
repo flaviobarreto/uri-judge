@@ -1,0 +1,38 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            double nota, media, soma, NotaFinal;
+
+
+            media = 0.0;
+            soma = 0.0;
+            while (media != 2.0)
+            {
+                nota = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                if (nota < 0.0 || nota > 10.0)
+                {
+                    Console.WriteLine("nota invalida");
+                    media += 0.0;
+                    
+                }
+                else if (nota >= 0.0 && nota <= 10.0)
+                {
+                    media++;
+                    soma += nota;
+                }
+               
+            }
+
+            NotaFinal = soma / media;
+            Console.WriteLine("media = " + NotaFinal.ToString("F2", CultureInfo.InvariantCulture));
+
+        }
+    }
+}
