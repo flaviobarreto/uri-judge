@@ -1,0 +1,46 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int alcool, gasolina, diesel, fim, recebe;
+            alcool = 0;
+            gasolina = 0;
+            diesel = 0;
+            fim = 0;
+            // alcool = 1, gasolina = 2, diesel = 3,  fim = 4;
+
+
+            while (fim != 4)
+            {
+                recebe = int.Parse(Console.ReadLine());
+                if (recebe == 1)
+                {
+                    alcool += 1;
+                }
+                else if (recebe == 2)
+                {
+                    gasolina += 1;
+                }
+                else if (recebe == 3)
+                {
+                    diesel += 1;
+                }
+                else if (recebe == 4)
+                {
+                    fim += 4;
+                }
+
+            }
+            Console.WriteLine("MUITO OBRIGADO");
+            Console.WriteLine("Alcool: " + alcool);
+            Console.WriteLine("Gasolina: " + gasolina);
+            Console.WriteLine("Diesel: " + diesel);
+        }
+    }
+}
