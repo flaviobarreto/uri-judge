@@ -1,0 +1,34 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int x, soma, resto;
+            x = int.Parse(Console.ReadLine());
+
+            while (x != 0)
+            {
+                resto = x % 2;
+
+                if (resto == 0)
+                {
+                    soma = (x) + (x + 2) + (x + 4) + (x + 6) + (x + 8);
+                    Console.WriteLine(soma);
+                }
+                else
+                {
+                    soma = (x + 1) + (x + 3) + (x + 5) + (x + 7) + (x + 9);
+                    Console.WriteLine(soma);
+                }
+                x = int.Parse(Console.ReadLine());
+
+
+            }
+        }
+    }
+}
