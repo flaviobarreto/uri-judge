@@ -1,0 +1,88 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            double x, soma, QuantidadeDeNotas, media, QuantidadeDeNotas1, soma1;
+
+            soma = 0;
+            QuantidadeDeNotas = 0;
+
+
+            while (QuantidadeDeNotas != 2)
+            {
+                x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                if (x < 0 || x > 10)
+                {
+                    Console.WriteLine("nota invalida");
+
+                }
+                else if (x >= 0 && x <= 10)
+                {
+                    QuantidadeDeNotas += 1;
+                    soma += x;
+
+                }
+
+            }
+            media = soma / QuantidadeDeNotas;
+            Console.WriteLine("media = " + media.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("novo calculo (1-sim 2-nao)");
+
+
+            x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            QuantidadeDeNotas1 = 0;
+            soma1 = 0;
+
+            while (x != 2)
+            {
+
+                if (x == 1)
+                {
+
+                    while (QuantidadeDeNotas1 != 2 || x == 1)
+                    {
+                        x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                        
+                        if (x < 0 || x > 10)
+                        {
+                            Console.WriteLine("nota invalida");
+                            
+                        }
+                        else if (x >= 0 && x <= 10)
+                        {
+                            
+                            QuantidadeDeNotas1 += 1;
+                            soma1 += x;
+
+                        }
+
+
+                    }
+                    media = soma1 / QuantidadeDeNotas1;
+                    Console.WriteLine("media = " + media.ToString("F2", CultureInfo.InvariantCulture));
+                    Console.WriteLine("novo calculo (1-sim 2-nao)");
+                    x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    QuantidadeDeNotas1 = 0;
+                    soma1 = 0;
+
+                }
+
+
+                else if ( x < 1 || x > 2)
+                {
+                    Console.WriteLine("novo calculo (1-sim 2-nao)");
+                    x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                }
+
+
+            }
+
+        }
+    }
+}
