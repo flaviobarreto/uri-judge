@@ -1,0 +1,43 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int a, b, c, d, e, par;
+            a = int.Parse(Console.ReadLine());
+            b = int.Parse(Console.ReadLine());
+            c = int.Parse(Console.ReadLine());
+            d = int.Parse(Console.ReadLine());
+            e = int.Parse(Console.ReadLine());
+
+            par = 0;
+            if (a % 2 == 0) 
+            {
+                par += 1;
+            }
+            if (b % 2 == 0)
+            {
+                par += 1;
+            }
+            if (c % 2 == 0)
+            {
+                par += 1;
+            }
+            if (d % 2 == 0)
+            {
+                par += 1;
+            }
+            if (e % 2 == 0)
+            {
+                par += 1;
+            }
+
+            Console.WriteLine(par + " valores pares");
+        }
+    }
+}
