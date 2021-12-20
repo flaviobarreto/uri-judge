@@ -1,0 +1,38 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int x, i, y, menor, maior, soma;
+            x = int.Parse(Console.ReadLine());
+            y = int.Parse(Console.ReadLine());
+
+            if (x < y)
+            {
+                menor = x;
+                maior = y;
+            }
+            else
+            {
+                maior = x;
+                menor = y;
+            }
+
+            soma = 0;
+            for (i = menor + 1; i < maior; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    soma += i;
+                }
+            }
+            Console.WriteLine(soma);
+
+        }
+    }
+}
