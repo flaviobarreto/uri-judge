@@ -1,0 +1,39 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int N, x, dentro, fora;
+
+            N = int.Parse(Console.ReadLine());
+            x = N;
+
+            dentro = 0;
+            fora = 0;
+
+            for (int i = 0; i < x; i++)
+            {
+                N = int.Parse(Console.ReadLine());
+
+                if (N >= 10 && N <= 20)
+                {
+                    dentro += 1;
+                }
+                else
+                {
+                    fora += 1;
+                }
+
+            }
+
+            Console.WriteLine(dentro + " in");
+            Console.WriteLine(fora + " out");
+
+        }
+    }
+}
