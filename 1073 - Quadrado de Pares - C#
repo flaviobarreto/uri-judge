@@ -1,0 +1,26 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int N, resultado;
+            N = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= N; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    resultado = i * i;
+                    Console.WriteLine(i + "^2 = " + resultado);
+
+                }
+            }
+
+        }
+    }
+}
