@@ -1,0 +1,30 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int x, maior, posicao;
+
+            maior = int.Parse(Console.ReadLine());
+            posicao = 1;
+
+            for (int i = 2; i <= 100; i++)
+            {
+                x = int.Parse(Console.ReadLine());
+                if ( x > maior)
+                {
+                    maior = x;
+                    posicao = i;
+                }
+            }
+            Console.WriteLine(maior);
+            Console.WriteLine(posicao);
+
+        }
+    }
+}
