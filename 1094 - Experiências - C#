@@ -1,0 +1,55 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int N, quantia, coelho, rato, sapo;
+            char cobais;
+
+            N = int.Parse(Console.ReadLine());
+            rato = 0;
+            coelho = 0;
+            sapo = 0;
+
+            for (int i = 0; i < N; i++)
+            {
+                string[] vet = Console.ReadLine().Split(' ');
+                quantia = int.Parse(vet[0]);
+                cobais = char.Parse(vet[1]);
+
+                if (cobais == 'R')
+                {
+                    rato += quantia;
+                }
+                else if (cobais == 'S')
+                {
+                    sapo += quantia;
+                }
+                else if (cobais == 'C')
+                {
+                    coelho += quantia;
+                }
+
+            }
+            int total = coelho + rato + sapo;
+            Console.WriteLine("Total: " + total + " cobaias");
+
+            Console.WriteLine("Total de coelhos: " + coelho);
+            Console.WriteLine("Total de ratos: " + rato);
+            Console.WriteLine("Total de sapos: " + sapo);
+
+            double PC = (double) coelho * 100 / total;
+            double PR = (double) rato * 100 / total;
+            double PS = (double) sapo * 100 / total;
+            Console.WriteLine("Percentual de coelhos: " + PC.ToString("F2", CultureInfo.InvariantCulture) + " %");
+            Console.WriteLine("Percentual de ratos: " + PR.ToString("F2", CultureInfo.InvariantCulture) + " %");
+            Console.WriteLine("Percentual de sapos: " + PS.ToString("F2", CultureInfo.InvariantCulture) + " %");
+
+        }
+    }
+}
