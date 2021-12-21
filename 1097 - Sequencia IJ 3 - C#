@@ -1,0 +1,24 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            for (int i = 1; i <= 9; i += 2)
+            {
+                int x = 7 + i - 1;
+                int p = x - 3;
+                
+                for (int j = x; j > p; j--)
+                {
+                    Console.Write("I=" + i + " J=" + j + "\n");
+                                                            
+                }
+            }
+        }
+    }
+}
