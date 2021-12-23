@@ -1,0 +1,36 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int N, x, y;
+            double divisao;
+
+            N = int.Parse(Console.ReadLine());
+            for (int i = 0; i < N; i++)
+            {
+                string[] num = Console.ReadLine().Split(' ');
+                x = int.Parse(num[0]);
+                y = int.Parse(num[1]);
+                
+                if ( y == 0)
+                {
+                    Console.WriteLine("divisao impossivel");
+                }
+                else
+                {
+                    divisao = (double) x / y;
+                    Console.WriteLine(divisao.ToString("F1", CultureInfo.InvariantCulture));
+
+                }
+
+            }
+
+        }
+    }
+}
