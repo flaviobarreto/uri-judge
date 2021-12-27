@@ -1,0 +1,44 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int M, N, x, y, Sum;
+            string[] vet = Console.ReadLine().Split(' ');
+            M = int.Parse(vet[0]);
+            N = int.Parse(vet[1]);
+
+            while (M > 0 && N > 0)
+            {
+                if (M > N)
+                {
+                    x = N;
+                    y = M;
+                }
+                else
+                {
+                    x = M;
+                    y = N;
+                }
+                Sum = x;
+                Console.Write(x + " ");
+                for (int i = x + 1; i <= y; i++)
+                {
+                    
+                    Console.Write(i + " ");
+                    Sum += i;
+                }
+                Console.WriteLine("Sum=" + Sum);
+                vet = Console.ReadLine().Split(' ');
+                M = int.Parse(vet[0]);
+                N = int.Parse(vet[1]);
+
+            }
+        }
+    }
+}
