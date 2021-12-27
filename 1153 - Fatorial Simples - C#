@@ -1,0 +1,22 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int N, b, n;
+            N = int.Parse(Console.ReadLine());
+            n = 1;
+            for (int i = 2; i <= N; i++)
+            {
+                n *= i;
+               
+            }
+            Console.WriteLine(n);
+        }
+    }
+}
