@@ -1,0 +1,44 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Vetores - Questa 1ª
+            //Faça um programa que leia N números reais e armazene-os em um vetor. Em seguida,
+            //mostrar na tela o maior número
+            //do vetor(supor não haver empates).Mostrar também a posição do maior elemento.
+            //Exemplo: Entrada; 6
+            // Saída; 8.0 4.0 10.0 14.0 13.0 7.0
+            //14.0
+
+            int N;
+            double maior, posicao;
+            double[] vetor;
+            N = int.Parse(Console.ReadLine());
+
+            vetor = new double[N];
+            string[] s = Console.ReadLine().Split(' ');
+            maior = 0;
+            posicao = 0;
+            for (int i = 0; i < N; i++)
+            {
+                vetor[i] = double.Parse(s[i], CultureInfo.InvariantCulture);
+            }
+            for (int i = 0;i < N; i++)
+            {
+                if (vetor[i] > maior)
+                {
+                    maior = vetor[i];
+                    posicao = i;
+                }
+            }
+
+            Console.WriteLine(maior.ToString("F1", CultureInfo.InvariantCulture));
+            Console.WriteLine(posicao);
+        }
+    }
+}
