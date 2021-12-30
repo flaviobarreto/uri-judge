@@ -1,0 +1,37 @@
+using System;
+
+namespace DevLogoVemAi
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            int N, x, y;
+            string[] nome;
+            int[] idade;
+            N = int.Parse(Console.ReadLine());
+            nome = new string[N];
+            idade = new int[N];
+
+            x = 0;
+            y = 0;
+            for (int i = 0; i < N; i++)
+            {
+                string[] s = Console.ReadLine().Split(' ');
+                nome[i] = s[0];
+                idade[i] = int.Parse(s[1]);
+            }
+            for (int i = 0; i < N; i++)
+            {
+                if (idade[i] > x)
+                {
+                    x = idade[i];
+                    y = i;
+                }
+            }
+            Console.WriteLine("Pessoa mais velha: " + nome[y]);
+        }
+    }
+}
