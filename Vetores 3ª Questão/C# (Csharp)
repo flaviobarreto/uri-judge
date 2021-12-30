@@ -1,0 +1,37 @@
+using System;
+
+namespace DevLogoVemAi
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            int N;
+            int[] A, B, C;
+            N = int.Parse(Console.ReadLine());
+            A = new int[N];
+            B = new int[N];
+            C = new int[N];
+            string[] x = Console.ReadLine().Split(' ');
+            string[] y = Console.ReadLine().Split(' ');
+            
+            for (int i = 0; i < N; i++)
+            {
+                A[i] = int.Parse(x[i]);
+            }
+            for (int i = 0; i < N; i++)
+            {
+                B[i] = int.Parse(y[i]);
+            }
+            for (int i = 0; i < N; i++)
+            {
+                C[i] = A[i] + B[i];
+                Console.Write(C[i] + " ");
+            }
+
+
+        }
+    }
+}
