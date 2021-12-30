@@ -1,0 +1,45 @@
+using System;
+
+namespace DevLogoVemAi
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            // Vetores - Questão 2ª
+            // Faça um programa que leia N números inteiros e armazene-os em um vetor.
+            // Em seguida, mostre na tela:
+            // - todos os números pares
+            // - a quantidade de números pares
+            // Exemplo:
+            // Entrada; 6
+            // 8 2 11 14 13 20
+            // Saída; 8 2 14 20
+            // 4
+            int N, par, quantos;
+            int[] vetor;
+            quantos = 0;
+            N = int.Parse(Console.ReadLine());
+
+            vetor = new int[N];
+            string[] s = Console.ReadLine().Split(' ');
+
+            for (int i = 0; i < N; i++)
+            {
+                vetor[i] = int.Parse(s[i]);
+            }
+            for (int i = 0; i < N; ++i)
+            {
+                if (vetor[i] % 2 == 0)
+                {
+                    par = vetor[i];
+                    Console.Write(par + " ");
+                    quantos += 1;
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine(quantos);
+        }
+    }
+}
