@@ -1,0 +1,56 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int N, quantidade, homem;
+            double menor, maior, soma;
+            double[] altura;
+            char[] M, F, X;
+            N = int.Parse(Console.ReadLine());
+            altura = new double[N];
+            X = new char[N];
+
+            menor = 3.0;
+            maior = 0.0;
+            soma = 0.0;
+            quantidade = 0;
+            homem = 0;
+            for (int i = 0; i < N; i++)
+            {
+                string[] s = Console.ReadLine().Split(' ');
+                altura[i] = double.Parse(s[0], CultureInfo.InvariantCulture);
+                X[i] = char.Parse(s[1]);
+
+                if (altura[i] < menor)
+                {
+                    menor = altura[i];
+                }
+                if (altura[i] > maior)
+                {
+                    maior = altura[i];
+                }
+                if (X[i] == 'F')
+                {
+                    soma += altura[i];
+                    quantidade += 1;
+                }
+                if (X[i] == 'M')
+                {
+                    homem += 1;
+                }
+
+            }
+            Console.WriteLine("Menor altura = " + menor.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Maior altura = " + maior.ToString("F2", CultureInfo.InvariantCulture));
+            double media = soma / quantidade;
+            Console.WriteLine("Media das alturas das mulheres = " + media.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Numero de homens = " + homem);
+        }
+    }
+}
