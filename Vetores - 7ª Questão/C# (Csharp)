@@ -1,0 +1,39 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int N;
+            double media;
+            string[] nome;
+            double[] PS1, PS2;
+            N = int.Parse(Console.ReadLine());
+            nome = new string[N];
+            PS1 = new double[N];
+            PS2 = new double[N];
+
+            for (int i = 0; i < N; i++)
+            {
+                string[] s = Console.ReadLine().Split(' ');
+                nome[i] = s[0];
+                PS1[i] = double.Parse(s[1], CultureInfo.InvariantCulture);
+                PS2[i] = double.Parse(s[2], CultureInfo.InvariantCulture);
+            }
+            Console.WriteLine("Alunos Aprovados:");
+            for (int i = 0; i < N; i++)
+            {
+                media = (PS1[i] + PS2[i]) / 2.0;
+                if (media == 6.0 || media > 6.0)
+                {
+                    Console.WriteLine(nome[i]);
+                }
+            }
+
+        }
+    }
+}
