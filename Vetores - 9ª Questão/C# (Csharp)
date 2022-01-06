@@ -1,0 +1,54 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string[] produto;
+            int N;
+            double porcentagem, A10, B1020, C20, SomaC, SomaV, LucroFinal;
+            double[] compra, venda;
+            N = int.Parse(Console.ReadLine());
+            compra = new double[N];
+            venda = new double[N];
+            produto = new string[N];
+
+            A10 = 0; B1020 = 0; C20 = 0; SomaC = 0; SomaV = 0;
+            for(int i = 0; i < N; i++)
+            {
+                string[] s = Console.ReadLine().Split(' ');
+                produto[i] = s[0];
+                compra[i] = double.Parse(s[1], CultureInfo.InvariantCulture);
+                venda[i] = double.Parse(s[2], CultureInfo.InvariantCulture);
+
+                porcentagem = venda[i] / compra[i] * 100.0;
+                if (porcentagem > 100.01 && porcentagem < 110.00)
+                {
+                    A10 += 1;
+                }
+                if (porcentagem > 110.0 && porcentagem < 120.00)
+                {
+                    B1020 += 1;
+                }
+                if(porcentagem > 120.00)
+                {
+                    C20 += 1;
+                }
+                SomaC += compra[i];
+                SomaV += venda[i];
+
+            }
+            LucroFinal = SomaV - SomaC;
+            Console.WriteLine("Lucro abaixo de 10%: " + A10);
+            Console.WriteLine("Lucro entre 10 e 20%: " + B1020);
+            Console.WriteLine("Lucro acima de 20%: " + C20);
+            Console.WriteLine("Valor total de compra: " + SomaC.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Valor total de venda: " + SomaV.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Lucro total: " + LucroFinal.ToString("F2", CultureInfo.InvariantCulture));
+        }
+    }
+}
