@@ -1,0 +1,41 @@
+using System;
+using System.Globalization;
+
+namespace primeiro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int N, M;
+            int[,] Matriz;
+            string[] s = Console.ReadLine().Split(' ');
+            M = int.Parse(s[0]);
+            N = int.Parse(s[1]);
+            Matriz = new int [M, N];
+
+            for (int i = 0; i < M; i++)
+            {
+                s = Console.ReadLine().Split(' ');
+                for(int j=0; j<N; j++)
+                {
+                    Matriz[i, j] = int.Parse(s[j]);
+                }
+            }
+            Console.WriteLine("VALORES NEGATIVOS: ");
+            for (int i=0; i<M; i++)
+            {
+                for (int j = 0; j<N; j++)
+                {
+                    if (Matriz[i, j] < 0)
+                    {
+                        Console.WriteLine(Matriz[i, j]);
+                    }
+                }
+            
+            }
+
+        }
+    }
+}
